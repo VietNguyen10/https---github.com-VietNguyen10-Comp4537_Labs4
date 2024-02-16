@@ -1,3 +1,4 @@
+window.uMessage = user_facing_message;
 class Client {
     constructor() {
         if (window.location.href.includes("Store.html")) {
@@ -11,7 +12,7 @@ class Client {
                 let lettersOnly = /^[A-Za-z\s]+$/;
     
                 if (!wordInput.match(lettersOnly)) {
-                    document.getElementById("status").innerHTML = "Word input should contain only letters.";
+                    document.getElementById("status").innerHTML = uMessage.INVALID_INPUT;
                     return;
                 }
     
@@ -29,7 +30,7 @@ class Client {
                 let lettersOnly = /^[A-Za-z\s]+$/;
     
                 if (!wordInput.match(lettersOnly)) {
-                    document.getElementById("status").innerHTML = "Word input should contain only letters.";
+                    document.getElementById("status").innerHTML = uMessage.INVALID_INPUT;
                     return;
                 }
     
@@ -49,8 +50,8 @@ class Client {
 
             const reqNum = response.req_num;
             const status = response.status;
-            document.getElementById("requestNo").innerHTML = `Number of entry: ${reqNum}`
-            document.getElementById("status").innerHTML = `Status: ${status}`;
+            document.getElementById("requestNo").innerHTML = uMessage.ENTRY + reqNum;
+            document.getElementById("status").innerHTML = uMessage.STATUS + status;
         }
     }
 
@@ -69,11 +70,11 @@ class Client {
                 const reqNum = response.req_num;
                 const status = response.status;
                 const definition = response.definition;
-                document.getElementById("requestNo").innerHTML = `Number of entry: ${reqNum}`
+                document.getElementById("requestNo").innerHTML =  uMessage.ENTRY + reqNum;
                 if(status === "no word found") {
                     document.getElementById("output-area").innerHTML = status;
                 }else {
-                    document.getElementById("output-area").innerHTML = `Definition: ${definition}`;
+                    document.getElementById("output-area").innerHTML = uMessage.DEFINITION + definition;
                 }
            }
         }
