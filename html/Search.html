@@ -4,36 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="../lang/message/en/user.js"></script>
     <script src="../js/client.js"></script>
-    <link rel="stylesheet" href="../css/storestylesheet.css">
-    <title>Store</title>
+    <script src="../lang/message/en/user.js"></script>
+    <link rel="stylesheet" href="../css/searchstyle.css">
+    <title>Search</title>
 </head>
 <body>
+    
     <div id="title">
-        <h1>Storing Page</h1>
-        <p>Enter the word and its definition below</p>
+        <h1>Searching Page</h1>
+        <p>Enter the word to see its definition</p>
         <p id="requestNo"></p>
     </div>
 
     <div id="input-area">
         <div id="word-text-box">
-            <h2>New word</h2>
             <input type="text" id="word-area">
-        </div>
-    
-        <div id="definition-text-area">
-            <h2>Definition for the word</h2>
-            <textarea name="definition" id="definition-area" cols="30" rows="10"></textarea>
         </div>
 
         <div id="status"></div>
-        <button id="add-button">Add Word</button>
+        <button id="search-button">Search</button>
+    </div>
+
+    <div id="output-area">
+
     </div>
 
     <form action="index.html">
         <button type="submit">Home</button>
     </form>
-    
 </body>
 </html>
