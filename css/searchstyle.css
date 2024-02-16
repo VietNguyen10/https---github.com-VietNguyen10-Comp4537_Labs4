@@ -1,0 +1,15 @@
+#input-area {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#search-button {
+    margin-left: 5px;
+}
+
+#output-area {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: solid 1px black;
+}
